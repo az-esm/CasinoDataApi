@@ -250,3 +250,7 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/Scripts/typings/node/node.d.ts
+/package.json
+/CasinoDataApi.sln
+/CasinoDataApi.njsproj
