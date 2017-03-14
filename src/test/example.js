@@ -1,30 +1,23 @@
-﻿/**
+/**
  * CasinoDataApi entities Usage example
  **/
-
-///<reference path="../entities.d.ts" />
-
-import { entities } from '../entities';
-
-let img1: entities.Image = { path: "img/1.jpg", xz: 100, yz: 100 };
-let img2: entities.Image = { path: "img/2.jpg", xz: 200, yz: 200 };
-
-let tags: entities.GameTag[] = [
+"use strict";
+var img1 = { path: "img/1.jpg", xz: 100, yz: 100 };
+var img2 = { path: "img/2.jpg", xz: 200, yz: 200 };
+var tags = [
     { id: 2, name: "slots" },
-    { id: 3, name: "top10" }];
-
-let g1: entities.Game = {
+    { id: 3, name: "top10" }
+];
+var g1 = {
     id: 1,
     name: "first game",
     tags: tags,
-
     props: {
         hasDemo: true,
         isDesktop: true,
         isMini: false,
         isMobile: false
     },
-
     thumbs: [img1, img2],
     background: img1,
     provider: "moshe va-hetzi",
@@ -34,59 +27,46 @@ let g1: entities.Game = {
     isHot: false,
     jackpotId: "jackpot1",
 };
-
 console.log("g1\n", g1);
-console.log("g1.tags[1]\n", g1.tags[1])
-
-let g2: entities.Game = {
+console.log("g1.tags[1]\n", g1.tags[1]);
+var g2 = {
     id: 2,
     name: "second game",
     props: {
         isMobile: true
     }
 };
-
 console.log("g2\n", g2);
-
-
-let gex1: entities.GameEx = {
+var gex1 = {
     id: 1,
     description: "the best game ever",
     maxBet: 1000,
     minBet: 1,
     screenshots: [img1, img2],
     since: new Date("1/Jan/2017"),
-    features: new Array<number>()
+    features: new Array()
 };
-
 gex1.features["volatility"] = 2;
 gex1.features["risk"] = 1;
-
 console.log("gex1\n", gex1);
-
 // jackpot
-let lvls: entities.JackpotLevel[] = [
+var lvls = [
     { name: "bronze", value: 1000 },
-    { name: "gold", value: 5000 }];
-
-let jp: entities.Jackpot = {
+    { name: "gold", value: 5000 }
+];
+var jp = {
     id: "jackpot1",
     name: "TakeTheCash",
     cur: "$", levels: lvls
 };
-
-
-let gameList: entities.GameList = {
-    id: 111, 
+var gameList = {
+    id: 111,
     cdn: "http://mycdn.com/sbtech/b000",
     games: [g1, g2],
     jackpots: [jp]
 };
-
 console.log("gameList\n", gameList);
 console.log("gameList.jackpots[0]\n", gameList.jackpots[0]);
-
-
 /*** expected output ***
 
 Debugger listening on [::]:5858
@@ -150,4 +130,5 @@ gameList.jackpots[0]
      { name: 'gold', value: 5000 } ] }
 
 
-**** ***/
+**** ***/ 
+//# sourceMappingURL=example.js.map
