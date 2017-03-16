@@ -76,15 +76,16 @@ let jp: entities.Jackpot = {
 };
 
 
-let gameList: entities.GameList = {
-    id: 111, 
+let gameSet: entities.GameSet = {
+    setId: "com.sbtech.gs.sample.1", 
     cdn: "http://mycdn.com/sbtech/b000",
     games: [g1, g2],
     jackpots: [jp]
 };
 
-console.log("gameList\n", gameList);
-console.log("gameList.jackpots[0]\n", gameList.jackpots[0]);
+console.log("gameSet\n", gameSet);
+console.log("gameSet.jackpots[0]\n", gameSet.jackpots[0]);
+
 
 
 /*** expected output ***
@@ -119,8 +120,8 @@ gex1
      { path: 'img/2.jpg', xz: 200, yz: 200 } ],
   since: 2016-12-31T22:00:00.000Z,
   features: [ volatility: 2, risk: 1 ] }
-gameList
- { id: 111,
+gameSet
+ { setId: 'com.sbtech.gs.sample.1',
   cdn: 'http://mycdn.com/sbtech/b000',
   games:
    [ { id: 1,
@@ -141,7 +142,7 @@ gameList
        name: 'TakeTheCash',
        cur: '$',
        levels: [Object] } ] }
-gameList.jackpots[0]
+gameSet.jackpots[0]
  { id: 'jackpot1',
   name: 'TakeTheCash',
   cur: '$',

@@ -254,3 +254,4 @@ paket-files/
 /package.json
 /CasinoDataApi.sln
 /CasinoDataApi.njsproj
+/.vscode/launch.json

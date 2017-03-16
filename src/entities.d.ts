@@ -4,6 +4,7 @@ export declare namespace entities {
      * Game data types
      */
 
+    // Image: icon/screenshot/background
     interface Image {
         readonly path: string;      // location in CDN
         readonly xz: number;        // width in px
@@ -78,9 +79,9 @@ export declare namespace entities {
      */
 
     // Response for a widget / lobby-category
-    interface GameList {
+    interface GameSet {
 
-        readonly id: number;        // matches requested game-list id
+        readonly setId: string;     // matches requested game-set id
         cdn?: string;               // root path for resources
         games?: Game[];
         jackpots?: Jackpot[];       // list of jackpots matching the list of games
@@ -92,9 +93,9 @@ export declare namespace entities {
 * API
 * /
 
-// get a list of games for a tab/widget 
-//  listId: the game-list id requested 
-function getGameList(listId: number): GameList;
+// get a set of games for a tab/widget 
+//  setId: the game-set id requested 
+function getGameSet(setId: string): GameSet;
 
 // get a list of extended game information
 //  gameIds: array of requested game IDs.
