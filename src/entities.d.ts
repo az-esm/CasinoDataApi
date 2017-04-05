@@ -4,8 +4,8 @@ export declare namespace entities {
      * Game data types
      */
 
-    // Image: icon/screenshot/background
-    interface Image {
+    // Media: icon/screenshot/background
+    interface Media {
         readonly path: string;      // location in CDN
         readonly xz: number;        // width in px
         readonly yz: number;        // hight in px
