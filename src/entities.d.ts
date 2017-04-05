@@ -31,8 +31,8 @@ export declare namespace entities {
         props: GameProps;           // game properties
         tags?: GameTag[];           // list of game tags/categories associated with this game
 
-        thumbs?: Image[];           // list of thumbnails available for display
-        background?: Image;         // background image
+        thumbs?: Media[];           // list of thumbnails available for display
+        background?: Media;         // background image
         provider?: string;          // provider name (html-encode to display)
         populatiry?: number;        // "played today X times"
         priority?: number;          // display priority
@@ -47,7 +47,7 @@ export declare namespace entities {
         readonly id: number;        // sbtech game launch id
 
         description?: string;       // game description (html-encode to display)
-        screenshots?: Image[];
+        screenshots?: Media[];
         since?: Date;               // launch date
 
         minBet?: number;            // min bet (player currency)
